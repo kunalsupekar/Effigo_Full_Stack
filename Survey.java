@@ -26,6 +26,6 @@ public class Survey {
         System.out.println("Thank you "+name+" for answering all <counter> questions");
         System.out.println("Weekly, you spend "+(coffeePrice*coffeeAmount)+" on coffee");
         System.out.println("Weekly, you spend "+(foodAmount*foodPrice)+" on food");
-
+        sc.close();
     }
 }
