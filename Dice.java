@@ -3,9 +3,9 @@ public class Dice {
         
         try{
            
-        for(int i=0;i<20;i++){
+        while(true){
             Thread.sleep(500);
-            System.out.println(dice());
+            System.out.println(generateNumberBetween13and17());
         }     
         }catch(Exception e){
             System.out.println(e.getMessage());
@@ -20,5 +20,13 @@ public class Dice {
         int di=(int) n;
         return di;
 
+    }
+
+
+    public static  int generateNumberBetween13and17(){
+        double n=Math.random()*5;
+        n+=13;
+        int di=(int) n;
+        return di;
     }
 }
