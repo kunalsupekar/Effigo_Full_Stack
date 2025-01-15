@@ -1,7 +1,8 @@
 public class Chorus {
     public static void main(String[] args) {
-        singChorus();
-       
+        //singChorus();
+    String str=null;
+    System.out.println(str.equals(null));
 
     }
 

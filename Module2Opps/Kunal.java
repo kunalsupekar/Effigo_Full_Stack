@@ -9,8 +9,15 @@ public class Kunal {
         };
 
         Delearship dealership = new Delearship(cars);
-
+        // Integer num=4;
+        // int number=new Integer(num);
         // Get a deep copy of the car at index 0
+
+
+        // int value=Integer.valueOf("23");
+        int value=Integer.parseInt("12345")+1;
+        String s=Integer.toString(value)+"kunal";
+        System.out.println(s);
         Car carAtIndex0 = dealership.getCar(0);
         System.out.println("Original car make: " + carAtIndex0.getMake());
 
