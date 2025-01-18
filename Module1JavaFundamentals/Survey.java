@@ -1,31 +1,36 @@
-import java.util.Scanner;
+import java.util.Map;
+
+import java.util.TreeMap;
 
 public class Survey {
     public static void main(String[] args) {
 
-      Scanner sc=new Scanner(System.in);
-        System.out.println("Welcome. Thank you for taking the survey");
+      
+        int multiplier = 5;
+        Map<Integer,Integer> tree=new TreeMap<>();
+        tree.put(1, multiplier*1);
+        tree.put(2, multiplier*2);
+        tree.put(3, multiplier*3);
+        tree.put(4, multiplier*4);
+        tree.put(5, multiplier*5);
+        tree.put(6, multiplier*6);
+        tree.put(7, multiplier*7);
+        tree.put(8, multiplier*8);
+        tree.put(9, multiplier*9);
+        tree.put(10, multiplier*10);
 
-        System.out.println("What is your name?");
-        String name=sc.nextLine();
+        System.out.println("\nWhat is 4 multiplied by " + multiplier);
+        System.out.println(tree.get(4));
 
-        System.out.println("How much money do you spend on coffee?");
-        double coffeePrice=sc.nextDouble();
+        System.out.println("\nWhat is 7 multiplied by " + multiplier);
+        System.out.println(tree.get(7));
 
-        System.out.println("How much money do you spend on fast food?");
-        double foodPrice=sc.nextDouble();
+        System.out.println("\nWhat is 3 multiplied by " + multiplier);
+        System.out.println(tree.get(3));
 
 
-        System.out.println("How many times a week do you buy coffee?");
-        int coffeeAmount=sc.nextInt();
+        System.out.println("\nDoes the table reach 20?");
+        String response = tree.containsKey(20) ? "Yes!" : "No, sorry!";
+        System.out.println(response);
 
-        System.out.println("How many times a week do you buy fast food?");
-        int foodAmount=sc.nextInt();
-
-        //*********PART B: RESPONDING TO THE USER**********
-        System.out.println("Thank you "+name+" for answering all <counter> questions");
-        System.out.println("Weekly, you spend "+(coffeePrice*coffeeAmount)+" on coffee");
-        System.out.println("Weekly, you spend "+(foodAmount*foodPrice)+" on food");
-        sc.close();
-    }
-}
+    }}

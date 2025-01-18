@@ -1,46 +1,36 @@
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Kunal {
     public static void main(String[] args) {
-        Car[] cars = new Car[] {
-            new Car("Nissan", 5000, 2020, "red", new String[] {"tires", "keys"}),
-            new Car("Dodge", 8500, 2019, "blue", new String[] {"tires", "keys"}),
-            new Car("Nissan", 5000, 2017, "yellow", new String[] {"tires", "filter"}),
-            new Car("Honda", 7000, 2019, "orange", new String[] {"tires", "filter"}),
-            new Car("Mercedes", 12000, 2015, "jet black", new String[] {"tires", "filter", "transmission"})
-        };
 
-        Delearship dealership = new Delearship(cars);
-        // Integer num=4;
-        // int number=new Integer(num);
-        // Get a deep copy of the car at index 0
+        int multiplier = 5;
+        Map<Integer,Integer> tree=new TreeMap<>();
+        tree.put(1, multiplier*1);
+        tree.put(2, multiplier*2);
+        tree.put(3, multiplier*3);
+        tree.put(4, multiplier*4);
+        tree.put(5, multiplier*5);
+        tree.put(6, multiplier*6);
+        tree.put(7, multiplier*7);
+        tree.put(8, multiplier*8);
+        tree.put(9, multiplier*9);
+        tree.put(10, multiplier*10);
+
+        System.out.println("\nWhat is 4 multiplied by " + multiplier);
+        System.out.println(tree.get(4));
+
+        System.out.println("\nWhat is 7 multiplied by " + multiplier);
+        System.out.println(tree.get(7));
+
+        System.out.println("\nWhat is 3 multiplied by " + multiplier);
+        System.out.println(tree.get(3));
 
 
-        // int value=Integer.valueOf("23");
-        int value=Integer.parseInt("12345")+1;
-        String s=Integer.toString(value)+"kunal";
-        System.out.println(s);
-        Car carAtIndex0 = dealership.getCar(0);
-        System.out.println("Original car make: " + carAtIndex0.getMake());
+        System.out.println("\nDoes the table reach 20?");
+        String response = tree.containsKey(20) ? "Yes!" : "No, sorry!";
+        System.out.println(response);
 
-        // Modify the car's make
-        carAtIndex0.setMake("Toyota");
-        System.out.println("Modified car make: " + carAtIndex0.getMake());
 
-        // Verify that the car in the dealership is not affected
-        System.out.println("Dealership car make: " + dealership.getCar(0).getMake());
-
-        // Create a new Car object
-        Car newCar = new Car("BMW", 10000, 2018, "silver", new String[] {"tires", "filter", "transmission"});
-
-        // Set the car at index 1 in the dealership to a deep copy of the newCar
-        dealership.setCar(1, newCar);
-
-        // Verify that the car at index 1 in the dealership has been updated
-        System.out.println("Dealership car make at index 1: " + dealership.getCar(1).getMake());
-
-        // Modify the newCar object
-        newCar.setMake("Audi");
-
-        // Verify that the car in the dealership is not affected
-        System.out.println("Dealership car make at index 1 after modifying newCar: " + dealership.getCar(1).getMake());
     }
 }
